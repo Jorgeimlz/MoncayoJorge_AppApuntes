@@ -48,4 +48,29 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Images\icon_about.png" />
+	  <None Remove="Resources\Images\icon_about_ios.png" />
+	  <None Remove="Resources\Images\icon_notes.png" />
+	  <None Remove="Resources\Images\icon_notes_ios.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\AllNotesPageJorge.xaml.cs">
+	    <DependentUpon>AllNotesPageJorge.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AllNotesPageJorge.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\NotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
